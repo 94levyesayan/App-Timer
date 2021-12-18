@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Card } from "antd";
 
 export const MainContainer = styled.div`
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background-image: url("https://images.pexels.com/photos/4082638/pexels-photo-4082638.jpeg?cs=srgb&dl=pexels-fredrick-eankels-4082638.jpg&fm=jpg");
   background-position: center;
   background-size: cover;

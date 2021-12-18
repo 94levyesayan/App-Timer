@@ -18,7 +18,7 @@ const MainLayout: React.FC<IProps> = () => {
             Plese create your timer
             </Styles.Title>
             <Row justify="center">
-                <Col span={10}>
+                <Col lg={8} sm={24} xs={24}>
                     {timers.map((item: Timer, index: number) => {
                         return (
                             <Styles.CustomCard key={item.currentTime} hoverable>
