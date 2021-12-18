@@ -5,6 +5,7 @@ declare interface Timer {
 
 declare interface MainSlice {
     timers: Timer[] | [],
+    successModal: {status: boolean, name: string}
 }
 
 declare interface State {

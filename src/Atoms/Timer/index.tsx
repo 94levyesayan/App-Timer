@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Statistic } from "antd";
 import { useDispatch } from "react-redux";
-import { setFilterTimer } from "../../Store/mainSlice";
+import { setFilterTimer, setSuccessModal } from "../../Store/mainSlice";
 import * as Styles from "./styles";
 import { PlayCircleTwoTone, PauseCircleTwoTone } from '@ant-design/icons';
 
@@ -17,6 +17,7 @@ const TimerComponent: React.FC<IPropsTimer> = ({ currentTimer, id }) => {
 
     function onFinish() {
         dispatch(setFilterTimer(id));
+        dispatch(setSuccessModal({status:true, name: currentTimer.title}))
     }
 
     const clockRef = useRef<HTMLDivElement | any>();

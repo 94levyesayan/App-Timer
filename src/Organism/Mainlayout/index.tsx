@@ -5,13 +5,12 @@ import * as Styles from "./styles";
 import { useSelector } from "react-redux";
 import { getTimers } from "../../Store/selector";
 import { Col, Row } from "antd";
+import SuccessModal from "../../Moleculs/SuccessModal";
 
 interface IProps { }
 
 const MainLayout: React.FC<IProps> = () => {
     const timers = useSelector(getTimers);
-    console.log(timers);
-
     return (
         <Styles.MainContainer>
             <Styles.Title>
@@ -29,6 +28,7 @@ const MainLayout: React.FC<IProps> = () => {
                 </Col>
             </Row>
             <TimerModal />
+            <SuccessModal />
         </Styles.MainContainer>
     );
 };

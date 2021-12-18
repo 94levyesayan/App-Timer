@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: MainSlice = {
   timers: [],
+  successModal: {status: false, name: ''}
 };
 
 export const mainSlice = createSlice({
@@ -14,6 +15,12 @@ export const mainSlice = createSlice({
         timers: [...state.timers, action.payload],
       };
     },
+    setSuccessModal: (state,action: PayloadAction<any>) => {
+      return {
+        ...state,
+        successModal: action.payload
+      }
+    },
     setFilterTimer: (state, action: PayloadAction<number>) => {
       return {
         ...state,
@@ -25,6 +32,6 @@ export const mainSlice = createSlice({
   },
 });
 
-export const { setTimer, setFilterTimer } = mainSlice.actions;
+export const { setTimer, setFilterTimer, setSuccessModal } = mainSlice.actions;
 
 export default mainSlice.reducer;
